@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coop+ — Conecta quem precisa com quem faz</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          neon: '#6d4aff',
+          dark: '#3e2f5b',
+          light: '#eee9ff',
+          off: '#fafafc',
+          gray: '#6b7280',
+        },
+        fontFamily: {
+          display: ['Sora', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; background: #fafafc; }
+  .font-display { font-family: 'Sora', sans-serif; }
+  .infinity-line {
+    stroke-dasharray: 4 8;
+    animation: dash 6s linear infinite;
+  }
+  @keyframes dash { to { stroke-dashoffset: -120; } }
+  .grad-text {
+    background: linear-gradient(90deg, #6d4aff, #3e2f5b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .card-hover { transition: transform .25s ease, box-shadow .25s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -20px rgba(62,47,91,.25); }
+  @media (prefers-reduced-motion: reduce) {
+    .infinity-line { animation: none; }
+  }
+</style>
+</head>
+<body class="text-dark">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-off/90 backdrop-blur border-b border-light">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <!-- LOGO: troque o src abaixo pela sua imagem (ex: "logo.png" ou "assets/logo.svg") -->
+        <img src="img/Untitled (400 x 300 px) (400 x 200 px) (1).png" alt="Coop+" class="h-20 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'">
+        <span class="font-display font-extrabold text-xl" style="display:none">Coop<span class="text-neon">+</span></span>
+      </div>
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray">
+        <a href="#categorias" class="hover:text-dark transition">Categorias</a>
+        <a href="#como-funciona" class="hover:text-dark transition">Como funciona</a>
+        <a href="#prestadores" class="hover:text-dark transition">Para prestadores</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden sm:inline text-sm font-semibold text-dark hover:text-neon transition">Entrar</a>
+        <a href="#" class="bg-neon text-white text-sm font-semibold px-4 py-2 rounded-full hover:bg-dark transition">Criar conta</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 pt-20 pb-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <span class="inline-flex items-center gap-2 bg-light text-neon text-xs font-semibold px-3 py-1.5 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-neon"></span> +2.400 prestadores ativos
+        </span>
+        <h1 class="font-display font-extrabold text-4xl md:text-5xl leading-tight mt-5">
+          Quem precisa encontra.<br>
+          <span class="grad-text">Quem faz, conecta.</span>
+        </h1>
+        <p class="text-gray text-lg mt-5 max-w-md">
+          Coop+ une pessoas que precisam de um serviço com quem sabe fazer — do conserto rápido ao projeto completo, sem intermediário burocrático.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-8">
+          <a href="#" class="bg-neon text-white font-semibold px-6 py-3 rounded-full hover:bg-dark transition">Encontrar um serviço</a>
+          <a href="#" class="border border-dark/15 text-dark font-semibold px-6 py-3 rounded-full hover:border-neon hover:text-neon transition">Oferecer um serviço</a>
+        </div>
+      </div>
+
+      <!-- Infinity loop visual -->
+      <div class="relative flex justify-center">
+        <img src="img/Untitled (400 x 300 px) (500 x 500 px).png" class="">
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIAS -->
+  <section id="categorias" class="max-w-6xl mx-auto px-6 py-16">
+    <div class="flex items-end justify-between mb-8">
+      <div>
+        <p class="text-neon text-sm font-semibold">Categorias</p>
+        <h2 class="font-display font-bold text-2xl md:text-3xl mt-1">O que você precisa hoje?</h2>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <!-- repeatable category card -->
+      <a href="#" class="card-hover bg-white border border-light rounded-2xl p-5">
+        <div class="w-10 h-10 rounded-xl bg-light flex items-center justify-center text-neon font-display font-bold">⚡</div>
+        <p class="font-semibold mt-4">Elétrica</p>
+        <p class="text-gray text-sm mt-1">312 prestadores</p>
+      </a>
+      <a href="#" class="card-hover bg-white border border-light rounded-2xl p-5">
+        <div class="w-10 h-10 rounded-xl bg-light flex items-center justify-center text-neon font-display font-bold">🔧</div>
+        <p class="font-semibold mt-4">Reformas</p>
+        <p class="text-gray text-sm mt-1">450 prestadores</p>
+      </a>
+      <a href="#" class="card-hover bg-white border border-light rounded-2xl p-5">
+        <div class="w-10 h-10 rounded-xl bg-light flex items-center justify-center text-neon font-display font-bold">🧹</div>
+        <p class="font-semibold mt-4">Limpeza</p>
+        <p class="text-gray text-sm mt-1">280 prestadores</p>
+      </a>
+      <a href="#" class="card-hover bg-white border border-light rounded-2xl p-5">
+        <div class="w-10 h-10 rounded-xl bg-light flex items-center justify-center text-neon font-display font-bold">💻</div>
+        <p class="font-semibold mt-4">Tecnologia</p>
+        <p class="text-gray text-sm mt-1">190 prestadores</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="bg-light py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-neon text-sm font-semibold">Como funciona</p>
+        <h2 class="font-display font-bold text-2xl md:text-3xl mt-1">Do pedido ao serviço feito</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-12 h-12 mx-auto rounded-full bg-neon text-white font-display font-bold flex items-center justify-center">1</div>
+          <h3 class="font-display font-semibold text-lg mt-4">Descreva o que precisa</h3>
+          <p class="text-gray text-sm mt-2">Conte o serviço, prazo e localização em poucos cliques.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 mx-auto rounded-full bg-neon text-white font-display font-bold flex items-center justify-center">2</div>
+          <h3 class="font-display font-semibold text-lg mt-4">Compare prestadores</h3>
+          <p class="text-gray text-sm mt-2">Veja avaliações, preços e disponibilidade de quem faz.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-12 h-12 mx-auto rounded-full bg-neon text-white font-display font-bold flex items-center justify-center">3</div>
+          <h3 class="font-display font-semibold text-lg mt-4">Contrate e acompanhe</h3>
+          <p class="text-gray text-sm mt-2">Combine direto pelo app, do início até a entrega.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESTADORES CTA -->
+  <section id="prestadores" class="max-w-6xl mx-auto px-6 py-20">
+    <div class="bg-dark rounded-3xl px-8 py-14 md:px-16 text-center text-off relative overflow-hidden">
+      <div class="absolute -right-10 -top-10 w-56 h-56 bg-neon/30 rounded-full blur-3xl"></div>
+      <h2 class="font-display font-bold text-2xl md:text-3xl relative z-10">Você faz? A Coop+ leva clientes até você.</h2>
+      <p class="text-light/70 mt-3 max-w-lg mx-auto relative z-10">Cadastre seus serviços, defina sua área de atuação e receba pedidos de quem precisa, sem mensalidade fixa.</p>
+      <a href="#" class="inline-block bg-neon text-white font-semibold px-7 py-3 rounded-full mt-7 hover:bg-light hover:text-dark transition relative z-10">Quero oferecer serviços</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-light">
+    <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <!-- LOGO (footer): mesma imagem do header -->
+        <img src="logo.png" alt="Coop+" class="h-7 w-auto" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline'">
+        <span class="font-display font-extrabold text-lg" style="display:none">Coop<span class="text-neon">+</span></span>
+        <span class="text-gray text-sm">— Conecta quem precisa com quem faz.</span>
+      </div>
+      <p class="text-gray text-sm">© 2026 Coop+. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
