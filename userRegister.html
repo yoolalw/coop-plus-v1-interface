@@ -22,14 +22,19 @@
     <div class="flex flex-col align-middle items-center justify-center">
 
         <!--CONTAINER -> ESCOLHENDO QUAL PERFIL IRÁ USAR -->
-        <div id="containerChoice" class="border-1 border-[#eee9ff] w-[600px] rounded-xl shadow-xl mt-30 bg-purple-100 h-[400px] justify-center align-middle flex flex-col text-center">
+        <div id="containerChoice"
+            class="border-1 border-[#eee9ff] w-[600px] rounded-xl shadow-xl mt-30 bg-purple-100 h-[400px] justify-center align-middle flex flex-col text-center">
             <h2 class="font-semibold mt-10 text-[30px] text-[#3e2f5b]">Seja bem-vindo!</h2>
             <h2 class="font-semibold text-[20px] text-[#6b7280]">Registre-se!</h2>
             <div class="w-full h-[350px] justify-center align-middle items-center">
                 <h3 class="text-purple-900 font-semibold mt-10">Escolha uma das opções abaixo</h3>
                 <div class="buttons justify-center flex-col flex gap-3 items-center">
-                    <buttons id="choiceEmployee" class="border-1 border-[#eee9ff] rounded-xl w-[400px] h-[60px] text-[20px]  font-semibold hover:bg-white cursor-pointer flex justify-center items-center shadow-xl bg-[#fafafc]">Quero vender meu serviço!</buttons>
-                    <buttons id="choiceClient" class="border-1 border-[#eee9ff] rounded-xl w-[400px] h-[60px] text-[20px]  font-semibold hover:bg-white cursor-pointer flex justify-center items-center shadow-xl bg-[#fafafc]">Quero contratar um serviço!</buttons>
+                    <buttons id="choiceEmployee"
+                        class="border-1 border-[#eee9ff] rounded-xl w-[400px] h-[60px] text-[20px]  font-semibold hover:bg-white cursor-pointer flex justify-center items-center shadow-xl bg-[#fafafc]">
+                        Quero vender meu serviço!</buttons>
+                    <buttons id="choiceClient"
+                        class="border-1 border-[#eee9ff] rounded-xl w-[400px] h-[60px] text-[20px]  font-semibold hover:bg-white cursor-pointer flex justify-center items-center shadow-xl bg-[#fafafc]">
+                        Quero contratar um serviço!</buttons>
                 </div>
             </div>
         </div>
@@ -37,12 +42,49 @@
 
         <!--CONTAINER -> PERFIL EMPLOYEE -> REGISTRO -->
 
-        <div id="containerEmployeeRegister" class="border-1 rounded-xl border-purple-200 bg-[#eee9ff] shadow-xl w-[600px] h-[700px] mt-10 flex justify-center items-center">
+        <div id="containerEmployeeRegister"
+            class="border-1 flex flex-col rounded-xl border-purple-200 bg-[#eee9ff] shadow-xl w-[600px] h-[700px] mt-10 flex justify-center items-center">
+            <h2 class="font-semibold  text-[30px] text-[#3e2f5b]">Seja bem-vindo!</h2>
+            <h2 class="font-semibold text-[20px] text-[#6b7280]">Registre-se!</h2>
             <form id="formEmployee">
-                <div class="boxInput rounded-lg shadow-xl border-purple-100 h-[50px] bg-[#fafafc] border-1 flex flex-col justify-center w-[400px]">
-                    <input class="text-[#6b7280] ml-5" placeholder="Nome completo" id="empNomeCompleto" type="text"></label>
-                </div>
+                <div class="flex flex-col mt-8 gap-2 justify-center align-middle items-center">
+                    <div
+                        class="boxInput rounded-lg shadow-xl border-purple-100 h-[50px] bg-[#fafafc] border-1 flex flex-col justify-center w-[400px]">
+                        <input class="text-[#6b7280] ml-5" placeholder="Nome completo" id="empNomeCompleto"
+                            type="text"></label>
+                    </div>
+                    <div
+                        class="boxInput rounded-lg shadow-xl border-purple-100 h-[50px] bg-[#fafafc] border-1 flex flex-col justify-center w-[400px]">
+                        <input class="text-[#6b7280] ml-5" placeholder="Email" id="empEmail"
+                            type="email"></label>
+                    </div>
+                    <div
+                        class="boxInput rounded-lg shadow-xl border-purple-100 h-[50px] bg-[#fafafc] border-1 flex flex-col justify-center w-[400px]">
+                        <input class="text-[#6b7280] ml-5" placeholder="Telefone" id="empTelefone"
+                            type="tel"></label>
+                    </div>
+                    <div
+                        class="boxInput rounded-lg shadow-xl border-purple-100 h-[50px] bg-[#fafafc] border-1 flex flex-col justify-center w-[400px]">
+                        <input class="text-[#6b7280] ml-5" placeholder="CNPJ" id="empCnpj" type="text"></label>
+                    </div>
+                    <div
+                        class="boxInput rounded-lg shadow-xl border-purple-100 h-[50px] bg-[#fafafc] border-1 flex flex-col justify-center w-[400px]">
+                        <input class="text-[#6b7280] ml-5" placeholder="Tipo de serviço" id="empTipoServico" type="text"></label>
+                    </div>
+                    <div
+                        class="boxInput rounded-lg shadow-xl border-purple-100 h-[50px] bg-[#fafafc] border-1 flex flex-col justify-center w-[400px]">
+                        <input class="text-[#6b7280] ml-5" placeholder="Nome da empresa" id="empNomeEmpresa"
+                            type="text"></label>
+                    </div>
+                    <div
+                        class="boxInput rounded-lg shadow-xl border-purple-100 h-[50px] bg-[#fafafc] border-1 flex flex-col justify-center w-[400px]">
+                        <input class="text-[#6b7280] ml-5" placeholder="Senha" id="empSenha"
+                            type="password"></label>
+                    </div>
 
+                    <button id="empButtonRegistrar" class="h-[40px] hover:bg-purple-500 cursor-pointer w-[400px] rounded-xl text-[#fafafc] text-center flex items-center font-bold justify-center bg-[#6d4aff]">Cadastrar</button>
+
+                </div>
             </form>
         </div>
 
