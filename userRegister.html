@@ -8,7 +8,7 @@
     <title>Coop+</title>
 </head>
 
-<body>
+<body class="bg-[#fafafc]">
 
     <header>
         <div class="border-1 border-[#eee9ff] h-17 justify-start items-center flex">
@@ -18,34 +18,38 @@
         </div>
     </header>
 
-    <div class="justify-center flex">
-        <div class="flex  items-center align-middle justify-center m-auto">
-            <img src="img/Untitled (700 x 500 px).png" class=" h-[800px]">
-            <div
-                class="h-[700px] w-[500px] rounded-xl border-[#eee9ff] shadow-lg border-1 flex flex-col justify-center items-center ">
-                <div class="titles mt-30 text-center flex-col  ">
-                    <h2 class="font-semibold text-[30px] text-[#3e2f5b] ">Seja bem-vindo!</h2>
-                    <h3 class="font-semibold text-[20px] text-[#6b7280]">Registre-se!</h3>
-                </div>
-                <div class="h-[500px] mt-20 w-full">
-                    <div id="containerChoices" class="flex flex-col justify-center align-middle items-center">
-                        <h2 class="text-[15px] w-[200px] font-semibold text-center text-[#6d4aff] ">Escolha uma das
-                            opções
-                            abaixo!</h2>
-                        <button
-                            class="mt-5 w-[250px] h-[60px] bg-[#eee9ff] rounded-full font-bold text-[] text-[#3e2f5b] hover:bg-[#fafafc] cursor-pointer shadow-lg"
-                            id="choice_1">Quero vender meu serviço!</button>
-                        <button
-                            class="w-[250px] h-[60px] bg-[#eee9ff] rounded-full font-bold text-[] text-[#3e2f5b] hover:bg-[#fafafc] cursor-pointer shadow-lg mt-4"
-                            id="choice_2">Quero contratar um serviço!</button>
-                    </div>
+
+    <div class="flex flex-col align-middle items-center justify-center">
+
+        <!--CONTAINER -> ESCOLHENDO QUAL PERFIL IRÁ USAR -->
+        <div id="containerChoice" class="border-1 border-[#eee9ff] w-[600px] rounded-xl shadow-xl mt-30 bg-purple-100 h-[400px] justify-center align-middle flex flex-col text-center">
+            <h2 class="font-semibold mt-10 text-[30px] text-[#3e2f5b]">Seja bem-vindo!</h2>
+            <h2 class="font-semibold text-[20px] text-[#6b7280]">Registre-se!</h2>
+            <div class="w-full h-[350px] justify-center align-middle items-center">
+                <h3 class="text-purple-900 font-semibold mt-10">Escolha uma das opções abaixo</h3>
+                <div class="buttons justify-center flex-col flex gap-3 items-center">
+                    <buttons id="choiceEmployee" class="border-1 border-[#eee9ff] rounded-xl w-[400px] h-[60px] text-[20px]  font-semibold hover:bg-white cursor-pointer flex justify-center items-center shadow-xl bg-[#fafafc]">Quero vender meu serviço!</buttons>
+                    <buttons id="choiceClient" class="border-1 border-[#eee9ff] rounded-xl w-[400px] h-[60px] text-[20px]  font-semibold hover:bg-white cursor-pointer flex justify-center items-center shadow-xl bg-[#fafafc]">Quero contratar um serviço!</buttons>
                 </div>
             </div>
         </div>
+
+
+        <!--CONTAINER -> PERFIL EMPLOYEE -> REGISTRO -->
+
+        <div id="containerEmployeeRegister" class="border-1 rounded-xl border-purple-200 bg-[#eee9ff] shadow-xl w-[600px] h-[700px] mt-10 flex justify-center items-center">
+            <form id="formEmployee">
+                <div class="boxInput rounded-lg shadow-xl border-purple-100 h-[50px] bg-[#fafafc] border-1 flex flex-col justify-center w-[400px]">
+                    <input class="text-[#6b7280] ml-5" placeholder="Nome completo" id="empNomeCompleto" type="text"></label>
+                </div>
+
+            </form>
+        </div>
+
     </div>
 
 
-<script src="js/userRegister.js"></script>
+    <script src="js/userRegister.js"></script>
 </body>
 
 </html>

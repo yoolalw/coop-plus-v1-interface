@@ -1,10 +1,14 @@
-const choice1 = document.getElementById('choice_1')
-const choice2 = document.getElementById('choice_2')
-const containerChoices = document.getElementById('containerChoices')
+const containerChoice = document.getElementById('containerChoice')
+const choiceEmployee = document.getElementById('choiceEmployee')
+const choiceClient = document.getElementById('choiceClient')
 
-choice1.addEventListener('click', async (e) => {
+
+    containerChoice.style.display = 'none'
+
+
+choiceEmployee.addEventListener('click', (e) => {
     e.preventDefault()
-        
-})
 
-    
+    containerChoice.style.display = 'none'
+
+})
