@@ -64,124 +64,128 @@
 
 
         <!-- CONTAINER -> PERFIL EMPLOYEE -> REGISTRO -->
-        <div id="containerEmployeeRegister" class="w-full flex items-center justify-center">
-            <div
-                class="border border-purple-200 flex flex-col rounded-2xl bg-white shadow-lg shadow-purple-100 w-full max-w-[600px] mt-10 items-center px-6 py-10">
-                <h2 class="font-semibold text-3xl text-[#3e2f5b] brand-font">Seja bem-vindo!</h2>
-                <h2 class="font-medium text-lg text-[#6b7280] mt-1">Registre-se!</h2>
-                <form id="formEmployee" class="w-full flex justify-center">
-                    <div class="flex flex-col mt-8 gap-3 items-center w-full">
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="Nome completo" id="empNomeCompleto" type="text">
-                        </div>
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="Email - example@email.com" id="empEmail" type="email">
-                        </div>
+        <div class="flex items-center align-middle justify-center">
+            <div id="containerEmployeeRegister" class="w-full  flex items-center align-middle justify-center">
+                <div
+                    class="border border-purple-200 flex flex-col rounded-2xl bg-white shadow-lg shadow-purple-100  w-[600px] mt-10 items-center px-6 py-10">
+                    <h2 class="font-semibold text-3xl text-[#3e2f5b] brand-font">Seja bem-vindo!</h2>
+                    <h2 class="font-medium text-lg text-[#6b7280] mt-1">Registre-se!</h2>
+                    <form id="formEmployee" class="w-full flex justify-center">
+                        <div class="flex flex-col mt-8 gap-3 items-center w-full">
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="Nome completo" id="empNomeCompleto" type="text">
+                            </div>
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="Email - example@email.com" id="empEmail" type="email">
+                            </div>
 
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="Telefone - 00 9 0000-0000" id="empTelefone" type="tel">
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="Telefone - 00 9 0000-0000" id="empTelefone" type="tel">
+                            </div>
+
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="CNPJ - 00.000.000/0000-00" id="empCnpj" type="text">
+                            </div>
+
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="Tipo de serviço" id="empTipoServico" type="text">
+                            </div>
+
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="Nome da empresa" id="empNomeEmpresa" type="text">
+                            </div>
+
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="Senha" id="empSenha" type="password">
+                            </div>
+
+                            <button id="empButtonRegistrar"
+                                class="h-[45px] hover:bg-[#5a37e6] active:scale-[0.98] cursor-pointer w-full max-w-[400px] mt-3 rounded-xl text-white text-center flex items-center font-semibold justify-center bg-[#6d4aff] transition-all duration-150 shadow-md shadow-purple-200">Cadastrar</button>
+
                         </div>
-
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="CNPJ - 00.000.000/0000-00" id="empCnpj" type="text">
-                        </div>
-
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="Tipo de serviço" id="empTipoServico" type="text">
-                        </div>
-
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="Nome da empresa" id="empNomeEmpresa" type="text">
-                        </div>
-
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="Senha" id="empSenha" type="password">
-                        </div>
-
-                        <button id="empButtonRegistrar"
-                            class="h-[45px] hover:bg-[#5a37e6] active:scale-[0.98] cursor-pointer w-full max-w-[400px] mt-3 rounded-xl text-white text-center flex items-center font-semibold justify-center bg-[#6d4aff] transition-all duration-150 shadow-md shadow-purple-200">Cadastrar</button>
-
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
 
         <!-- CONTAINER -> REGISTER NEW CLIENT -->
-        <div id="containerClientRegister" class="w-full flex justify-center">
-            <div
-                class="border border-purple-200 flex flex-col rounded-2xl bg-white shadow-lg shadow-purple-100 w-full max-w-[600px] mt-10 items-center px-6 py-10">
-                <h2 class="font-semibold text-3xl text-[#3e2f5b] brand-font">Seja bem-vindo!</h2>
-                <h2 class="font-medium text-lg text-[#6b7280] mt-1 mb-8">Registre-se!</h2>
-                <form id="formClient" class="w-full flex justify-center">
-                    <div class="flex flex-col gap-3 items-center w-full">
+        <div class="flex justify-center items-center align-middle">
+            <div id="containerClientRegister" class="w-full flex justify-center">
+                <div
+                    class="border border-purple-200 flex flex-col rounded-2xl bg-white shadow-lg shadow-purple-100 w-[600px] mt-10 items-center px-6 py-10">
+                    <h2 class="font-semibold text-3xl text-[#3e2f5b] brand-font">Seja bem-vindo!</h2>
+                    <h2 class="font-medium text-lg text-[#6b7280] mt-1 mb-8">Registre-se!</h2>
+                    <form id="formClient" class="w-full flex justify-center">
+                        <div class="flex flex-col gap-3 items-center w-full">
 
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="Nome completo" id="clientNomeCompleto" type="text">
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="Nome completo" id="clientNomeCompleto" type="text">
+                            </div>
+
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="Email - example@email.com" id="clientEmail" type="email">
+                            </div>
+
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="Telefone - 00 9 0000-0000" id="clientTelefone" type="tel">
+                            </div>
+
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="Endereco - Rua 2 Av. Três" id="clientEndereco" type="text">
+                            </div>
+
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="CPF - 111.222.333-44" id="clientCPF" type="text">
+                            </div>
+
+                            <div
+                                class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
+                                <input required
+                                    class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
+                                    placeholder="Senha" id="clientSenha" type="password">
+                            </div>
+
+                            <button id="clientButtonRegistrar"
+                                class="h-[45px] hover:bg-[#5a37e6] active:scale-[0.98] cursor-pointer w-full max-w-[400px] mt-3 rounded-xl text-white text-center flex items-center font-semibold justify-center bg-[#6d4aff] transition-all duration-150 shadow-md shadow-purple-200">Cadastrar</button>
                         </div>
-
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="Email - example@email.com" id="clientEmail" type="email">
-                        </div>
-
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="Telefone - 00 9 0000-0000" id="clientTelefone" type="tel">
-                        </div>
-
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="Endereco - Rua 2 Av. Três" id="clientEndereco" type="text">
-                        </div>
-
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="CPF - 111.222.333-44" id="clientCPF" type="text">
-                        </div>
-
-                        <div
-                            class="boxInput rounded-lg border border-[#e5e0fa] h-[50px] bg-[#fafafc] flex items-center w-full max-w-[400px] px-5 transition-all duration-150">
-                            <input required
-                                class="text-[#3e2f5b] placeholder-[#9ca3af] bg-transparent outline-none w-full text-sm"
-                                placeholder="Senha" id="clientSenha" type="password">
-                        </div>
-
-                        <button id="clientButtonRegistrar"
-                            class="h-[45px] hover:bg-[#5a37e6] active:scale-[0.98] cursor-pointer w-full max-w-[400px] mt-3 rounded-xl text-white text-center flex items-center font-semibold justify-center bg-[#6d4aff] transition-all duration-150 shadow-md shadow-purple-200">Cadastrar</button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
 
