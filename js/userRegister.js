@@ -2,6 +2,8 @@ const choiceClient = document.getElementById('choiceClient')
 const choiceEmployee = document.getElementById('choiceEmployee')
 const choicesContainer = document.getElementById("containerChoice")
 
+const allInputELements = document.querySelectorAll("input")
+
 const containerEmployeeRegister = document.querySelector('#containerEmployeeRegister')
 const containerClientRegister = document.querySelector('#containerClientRegister')
 
@@ -14,6 +16,10 @@ const formEmployee = document.getElementById('formEmployee')
 const clientButtomRegistrar = document.getElementById('clientButtonRegistrar')
 const empButtonRegistrar = document.getElementById('empButtonRegistrar')
 
+const errorAlertContainer = document.getElementById('errorAlertContainer')
+const buttonAlertClose = document.getElementById('buttonAlertClose')
+
+errorAlertContainer.style.display = "none"
 
 choiceEmployee.addEventListener('click', (e) => {
     e.preventDefault()
@@ -67,7 +73,7 @@ async function registerClient() {
             throw new Error('Ocorreu um erro ao realizar o fetch! ', response.status)
         }
         console.log(response.status)
-        window.location.href = "homePage.html"
+            window.location.href = "loginPage.html"
     })
 }
 
@@ -100,6 +106,7 @@ async function registerEmployee() {
             foto_perfil: ""
         }
 
+
         const response = await fetch('http://localhost:8080/auth/newEmployee', {
             method: 'POST',
             headers: {
@@ -113,6 +120,6 @@ async function registerEmployee() {
             throw new Error('Ocorreu um erro ao realizar o fetch! ', response.status)
         }
         console.log(response.status)
-        window.location.href = "homePage.html"
+        window.location.href = "loginPage.html"
     })
 }
