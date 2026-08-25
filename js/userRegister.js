@@ -2,8 +2,6 @@ const choiceClient = document.getElementById('choiceClient')
 const choiceEmployee = document.getElementById('choiceEmployee')
 const choicesContainer = document.getElementById("containerChoice")
 
-const allInputELements = document.querySelectorAll("input")
-
 const containerEmployeeRegister = document.querySelector('#containerEmployeeRegister')
 const containerClientRegister = document.querySelector('#containerClientRegister')
 
@@ -16,10 +14,6 @@ const formEmployee = document.getElementById('formEmployee')
 const clientButtomRegistrar = document.getElementById('clientButtonRegistrar')
 const empButtonRegistrar = document.getElementById('empButtonRegistrar')
 
-const errorAlertContainer = document.getElementById('errorAlertContainer')
-const buttonAlertClose = document.getElementById('buttonAlertClose')
-
-errorAlertContainer.style.display = "none"
 
 choiceEmployee.addEventListener('click', (e) => {
     e.preventDefault()
