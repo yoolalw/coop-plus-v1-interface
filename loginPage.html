@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coop+</title>
 </head>
+
 <body>
-    
+    <div class="flex flex-col justify-center align-middle items-center">
+        <h1 class="text-center text-[#3e2f5b] font-bold text-[30px] mt-14">Seja bem-vindo!</h1>
+        <h1 class="text-center text-[#3e2f5b] font-semibold text-[25px]">Faça login</h1>
+    </div>
+    <div class="flex flex-col justify-center items-center">
+        <div class="h-screen mt-[-140px] w-screen justify-center align-middle items-center flex flex-col">
+            <div
+                class="loginContainer w-[400px] h-[500px] border-2 rounded-lg border-purple-100  bg-gradient-to-b from-purple-100 to-purple-50 shadow-lg">
+
+                <div class="w-full h-full justify-center align-middle items-center flex flex-col">
+                    <img src="img/Untitled (400 x 300 px).png" class="w-[200px] mt-[-40px]">
+                    <div class="gap-4 flex flex-col">
+                        <div class="boxInput">
+                            <input type="text" id="email"
+                                class="rounded-lg shadow-lg w-[300px] h-[50px] border-2 border-purple-200 text-center"
+                                placeholder="Email">
+                        </div>
+                        <div class="boxInput">
+                            <input type="text" id="email"
+                                class="rounded-lg shadow-lg w-[300px] h-[50px] border-2 border-purple-200 text-center"
+                                placeholder="Senha">
+                        </div>
+                        <button id="loginSubmitButton"
+                            class="rounded-lg shadow-xl bg-[#5a37e6] h-[35px] font-semibold text-white hover:bg-purple-700">Entrar</button>
+                    </div>
+                    <div class="mt-10">
+                        <h2 class="text-[12px] text-[#3e2f5b]">Não possui uma conta? <a
+                                class="font-bold italic text-[#5a37e6]" href="userRegister.html"> Registre-se!</a></h2>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/loginLogic.js"></script>
+
 </body>
+
 </html>
