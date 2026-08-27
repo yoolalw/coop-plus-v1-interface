@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -7,7 +8,9 @@
     <title>Home - Coop+</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -32,10 +35,24 @@
         }
     </script>
     <style>
-        body { font-family: 'Inter', sans-serif; background: #F8F6FC; }
-        .star { color: #FF6F5E; }
-        .status-open { background: #E1F5EE; color: #085041; }
-        .status-progress { background: #FAEEDA; color: #633806; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #F8F6FC;
+        }
+
+        .star {
+            color: #FF6F5E;
+        }
+
+        .status-open {
+            background: #E1F5EE;
+            color: #085041;
+        }
+
+        .status-progress {
+            background: #FAEEDA;
+            color: #633806;
+        }
     </style>
 </head>
 
@@ -52,9 +69,10 @@
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray">
                 <a href="#categorias" class="hover:text-neon transition">Demandas</a>
                 <a href="#como-funciona" class="hover:text-neon transition">Avaliacoes</a>
-                <a href="#prestadores" class="hover:text-neon transition">Perfil</a>
+                <a href="" class="hover:text-neon transition">Perfil</a>
             </nav>
-            <a href="#novo-servico" class="hidden md:inline-flex items-center bg-neon text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-dark transition">
+            <a href="#novo-servico"
+                class="hidden md:inline-flex items-center bg-neon text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-dark transition">
                 Publicar serviço
             </a>
         </div>
@@ -63,10 +81,14 @@
     <!-- Container principal ! -->
     <div class="items-center flex flex-col align-middle justify-center">
 
-        <div class="w-full min-h-[300px] bg-gradient-to-br from-neon to-[#4C3A8C] relative overflow-hidden flex items-center">
-            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle, #ffffff 1.5px, transparent 1.5px); background-size: 28px 28px;"></div>
+        <div
+            class="w-full min-h-[300px] bg-gradient-to-br from-neon to-[#4C3A8C] relative overflow-hidden flex items-center">
+            <div class="absolute inset-0 opacity-20"
+                style="background-image: radial-gradient(circle, #ffffff 1.5px, transparent 1.5px); background-size: 28px 28px;">
+            </div>
             <div class="max-w-6xl mx-auto px-6 py-16 relative w-full">
-                <p class="text-white/70 font-medium text-sm tracking-wide uppercase mb-3">Coop+ &middot; comunidade de serviços</p>
+                <p class="text-white/70 font-medium text-sm tracking-wide uppercase mb-3">Coop+ &middot; comunidade de
+                    serviços</p>
                 <h1 class="font-display font-bold text-3xl md:text-5xl text-white max-w-2xl leading-tight">
                     Buscando oportunidades de mostrar suas capacidades?
                 </h1>
@@ -74,7 +96,8 @@
                     Encontre clientes avaliados pela própria comunidade ou publique sua demanda em poucos minutos.
                 </p>
                 <div class="flex flex-wrap gap-3 mt-8">
-                    <a href="#novo-servico" class="bg-white text-neon font-semibold px-6 py-3 rounded-full hover:bg-off transition">
+                    <a href="#novo-servico"
+                        class="bg-white text-neon font-semibold px-6 py-3 rounded-full hover:bg-off transition">
                         Publicar serviço
                     </a>
                 </div>
@@ -83,7 +106,8 @@
 
         <div class="flex flex-col md:flex-row justify-center gap-6 w-full max-w-6xl px-6 mt-10 mb-16">
 
-            <div id="containerUsuarios" class="w-full md:w-[340px] shrink-0 flex flex-col bg-white border border-light rounded-card p-6">
+            <div id="containerUsuarios"
+                class="w-full md:w-[340px] shrink-0 flex flex-col bg-white border border-light rounded-card p-6">
                 <h1 class="font-display font-semibold text-lg text-dark">Usuários mais avaliados</h1>
                 <p class="text-sm text-gray mt-1 mb-5">Quem mais se destaca na comunidade essa semana</p>
 
@@ -91,7 +115,9 @@
 
                     <!-- Modelo de card de usuário: repita esta div para cada usuário -->
                     <div class="flex items-center gap-3 p-3 rounded-2xl hover:bg-off transition">
-                        <div class="h-11 w-11 rounded-full bg-light text-neon font-display font-semibold flex items-center justify-center shrink-0">--</div>
+                        <div
+                            class="h-11 w-11 rounded-full bg-light text-neon font-display font-semibold flex items-center justify-center shrink-0">
+                            --</div>
                         <div class="flex-1 min-w-0">
                             <p class="font-medium text-sm text-dark truncate">Nome do usuário</p>
                             <p class="text-xs text-gray truncate">Especialidade</p>
@@ -126,6 +152,7 @@
         </div>
 
     </div>
-<script src="js/homePageForEmployersLogic.js"></script>
+    <script src="js/homePageForEmployersLogic.js"></script>
 </body>
+
 </html>

@@ -3,7 +3,8 @@ const containerPrincipaisUsuarios = document.getElementById('containerPrincipais
 const urlFetchGetDemands = "http://localhost:8080/demands"
 const urlFetchGetTheMostAvaliablesUsers = "http://localhost:8080/clients"
 
-const tokenSession = localStorage.getItem('token')
+const tokenSession = localStorage.getItem('tokenSession')
+console.log(tokenSession)
 async function fetchDemandas() {
     try {
         const response = await fetch(urlFetchGetDemands, {
@@ -32,10 +33,8 @@ async function fetchDemandas() {
                         </div>
                     </a> 
                 </div>
-                
                 `)
         })
-
     } catch (error) {
         console.error("Ocorreu um erro ao tentar estabelecer uma conexão com o servidor -> ", error)
         throw error

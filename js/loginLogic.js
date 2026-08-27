@@ -27,8 +27,23 @@ loginSubmitButton.addEventListener('click', (e) => {
             const data = await response.json()
             console.log(data)
             const tokenSession = data.token
+            const idSession = data.id
             console.log(tokenSession)
+            console.log(idSession)
             localStorage.setItem('tokenSession', tokenSession)
+            localStorage.setItem('idSession', idSession)
+            
+            if(data.role === "EMPLOYEE"){
+                setTimeout(() => {
+                    window.location.href = "homePageForEmployers.html"
+                }, 1400);
+            }
+            else if(data.role === "USER"){
+                setTimeout(() => {
+                    window.location.href = "homePageForClients.html"
+                }, 1400);
+            }
+            
             console.log(response.status)
 
         } catch (error) {
