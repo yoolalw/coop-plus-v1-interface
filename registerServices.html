@@ -1,15 +1,211 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coop+</title>
+    <title>Coop+ · Cadastre seu serviço</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#1C1730',
+                        off: '#F6F3FB',
+                        paper: '#FFFFFF',
+                        light: '#E3DEF5',
+                        neon: '#8B6BFF',
+                        neondark: '#6C46F0',
+                        clay: '#8E85A8',
+                    },
+                    fontFamily: {
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                        body: ['"IBM Plex Sans"', 'sans-serif'],
+                        mono: ['"IBM Plex Mono"', 'monospace'],
+                    },
+                    borderRadius: {
+                        card: '20px',
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F6F3FB;
+            background-image:
+                radial-gradient(circle at 1px 1px, rgba(28, 23, 48, 0.07) 1px, transparent 0);
+            background-size: 22px 22px;
+        }
+
+        .field-label {
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #8E85A8;
+        }
+
+        .field-input {
+            width: 100%;
+            background: #FFFFFF;
+            border: 1.5px solid #E3DEF5;
+            border-radius: 12px;
+            padding: 0.75rem 1rem;
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 0.95rem;
+            color: #1C1730;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .field-input::placeholder {
+            color: #B5ACCF;
+        }
+
+        .field-input:focus {
+            outline: none;
+            border-color: #6C46F0;
+            box-shadow: 0 0 0 4px rgba(139, 107, 255, 0.3);
+        }
+
+        .node-dot {
+            fill: #8B6BFF;
+        }
+
+        .node-line {
+            stroke: #D3CBEE;
+            stroke-width: 1.5;
+        }
+    </style>
 </head>
-<body>
 
+<body class="font-body text-ink">
 
-    
+    <header class="sticky top-0 z-50 bg-off/90 backdrop-blur border-b border-light">
+        <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <img src="img/Untitled (400 x 300 px) (400 x 200 px) (1).png" alt="Coop+" class="h-9 w-auto"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex'">
+                <span class="font-display font-bold text-lg tracking-tight" style="display:none">
+                    Coop<span class="text-neondark">+</span>
+                </span>
+            </div>
+
+            <div class="hidden sm:flex items-center gap-2 border border-light rounded-full pl-1 pr-3 py-1 bg-paper">
+                <span class="h-6 w-6 rounded-full bg-neon flex items-center justify-center">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 5v14M5 12h14" stroke="#1C1730" stroke-width="2.5" stroke-linecap="round" />
+                    </svg>
+                </span>
+                <span class="text-xs font-mono uppercase tracking-wide text-ink/70">Cadastro aberto</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Container principal -->
+    <main class="max-w-5xl mx-auto px-6 py-14">
+
+        <section class="mb-10">
+            <div class="flex items-center gap-3 mb-3">
+                <svg width="46" height="18" viewBox="0 0 46 18" fill="none" aria-hidden="true">
+                    <line x1="4" y1="9" x2="42" y2="9" class="node-line" />
+                    <circle cx="4" cy="9" r="4" class="node-dot" />
+                    <circle cx="23" cy="9" r="4" class="node-dot" />
+                    <circle cx="42" cy="9" r="4" class="node-dot" />
+                </svg>
+                <span class="field-label">Rede coop+</span>
+            </div>
+
+            <h1 class="font-display font-bold text-4xl sm:text-5xl leading-[1.05] tracking-tight max-w-2xl">
+                Registre seu serviço na cooperativa
+            </h1>
+            <p class="mt-4 text-ink/70 max-w-xl leading-relaxed">
+                Preencha os dados abaixo para colocar seu serviço visível para toda a rede.
+                Quanto mais claro o cadastro, mais fácil alguém encontrar exatamente o que você oferece.
+            </p>
+        </section>
+
+        <section class="grid lg:grid-cols-[1fr_320px] gap-6 items-start">
+
+            <!-- Card do formulário -->
+            <div class="bg-paper border border-light rounded-card p-6 sm:p-8 shadow-[0_1px_0_0_rgba(21,24,27,0.04)]">
+
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="font-display font-semibold text-xl">Dados do serviço</h2>
+                    <span class="field-label">01 / 01</span>
+                </div>
+
+                <div class="flex flex-col gap-5">
+
+                    <label class="flex flex-col gap-1.5">
+                        <span class="field-label">Título do serviço</span>
+                        <input type="text" id="nomeServico" class="field-input" placeholder="Ex.: Conserto de bicicletas">
+                    </label>
+
+                    <label class="flex flex-col gap-1.5">
+                        <span class="field-label">Tipo de serviço</span>
+                        <input type="text" id="tipoServico" class="field-input" placeholder="Ex.: Manutenção, design, aulas...">
+                    </label>
+
+                    <label class="flex flex-col gap-1.5">
+                        <span class="field-label">Descrição sobre o serviço</span>
+                        <textarea id="descricaoServico" rows="4" class="field-input resize-none"
+                            placeholder="Detalhe seu serviço! O que está incluso, prazos, forma de atendimento..."></textarea>
+                    </label>
+
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <label class="flex flex-col gap-1.5">
+                            <span class="field-label">Valor do serviço</span>
+                            <input type="text" id="valorServico" class="field-input" placeholder="Ex.: R$ 80,00">
+                        </label>
+
+                        <label class="flex flex-col gap-1.5">
+                            <span class="field-label">Métodos de contato</span>
+                            <input type="text" id="metodosContato" class="field-input" placeholder="Link do GitHub, Email..">
+                        </label>
+                    </div>
+
+                    <button id="buttonCadastrarServico"
+                        class="mt-2 w-full sm:w-auto self-start font-display font-semibold text-sm bg-neon hover:bg-neondark text-off px-6 py-3 rounded-full transition-colors shadow-[0_2px_0_0_#6C46F0] active:translate-y-[1px] active:shadow-none">
+                        Cadastrar serviço
+                    </button>
+                </div>
+            </div>
+
+            <!-- Coluna lateral -->
+            <aside class="bg-ink text-off rounded-card p-6 flex flex-col gap-5">
+                <div class="flex items-center gap-2">
+                    <span class="h-2 w-2 rounded-full bg-neon"></span>
+                    <span class="field-label text-off/60">Dicas rápidas</span>
+                </div>
+
+                <ul class="flex flex-col gap-4 text-sm leading-relaxed text-off/85">
+                    <li class="pb-4 border-b border-off/10">
+                        <span class="font-mono text-neon text-xs">TÍTULO</span>
+                        <p class="mt-1">Use um nome direto — quem procura decide em segundos.</p>
+                    </li>
+                    <li class="pb-4 border-b border-off/10">
+                        <span class="font-mono text-neon text-xs">DESCRIÇÃO</span>
+                        <p class="mt-1">Diga o que está incluso e qual o prazo médio de entrega.</p>
+                    </li>
+                    <li>
+                        <span class="font-mono text-neon text-xs">CONTATO</span>
+                        <p class="mt-1">Um link direto acelera o primeiro contato com a cooperativa.</p>
+                    </li>
+                </ul>
+            </aside>
+
+        </section>
+    </main>
 
     <script src="js/registerServicesLogic.js"></script>
 </body>
+
 </html>
