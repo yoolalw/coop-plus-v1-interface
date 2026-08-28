@@ -39,8 +39,12 @@ buttonCadastrarServico.addEventListener("click", async (e) => {
             if (!response.ok) {
                 throw new Error("Ocorreu um erro durante a requisição -> ", response.status)
             }
-
             console.log(response.status)
+
+            setTimeout(() => {
+                window.location.href = "profileUserEmployee.html"
+            }, 1200);
+
         } catch (error) {
             console.error("Ocorreu um erro ao tentar estabelecer uma conexão")
             throw error
